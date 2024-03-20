@@ -1,0 +1,3 @@
+/Users/Asus/Documents/oop/extra1/cmake-build-debug/CMakeFiles/extra1.dir
+/Users/Asus/Documents/oop/extra1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/Asus/Documents/oop/extra1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
