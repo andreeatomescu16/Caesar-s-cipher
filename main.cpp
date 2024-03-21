@@ -64,17 +64,18 @@ int nr_letters(char s[]) {
 
 void create_text(char t[], char s[], char res[]) {
 
-    for (int j = 0; j < strlen(s); j++)
+    for (int j = 0; j < strlen(t); j++)
         if (t[j] >= 'a' && t[j] <='z')
             res[j] = s[j] + 32;
         else
             res[j] = s[j];
 }
 
-void result(char t[]) {
+void result(char t[], char res[]) {
 
     char s[1001];
     upper_text(t, s);
+
     float v[27];
     frequencies(v);
 
@@ -85,7 +86,6 @@ void result(char t[]) {
 
     int i = 0;
     float minim = 999999;
-    char res[1001];
 
     while (i < 26) {
         if (ChiSqDist(v, fr, nrc) < minim) {
@@ -98,16 +98,15 @@ void result(char t[]) {
         NormFrequency(s, fr);
         i++;
     }
-
     res[strlen(t)] = '\0';
-    cout<<res;
 }
 
 int main() {
 
-    char t[1001];
+    char t[1001], res[1001];
     cin.getline(t,1001);
-    result(t);
+    result(t, res);
+    cout<<res;
 
     return 0;
 }
